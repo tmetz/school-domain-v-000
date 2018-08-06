@@ -15,4 +15,16 @@ class School
     @roster
   end
 
+  def grade(grade_level)
+    @roster[grade_level]
+  end
+
+  def sort
+    @sorted_roster {}
+    @roster.each do |grade_level, students|
+      @sorted_roster[grade_level] = students.sorted
+    end
+    @sorted_roster
+  end
+
 end
